@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COFFEE SHOP</title>
+    <link rel="icon" href="icon.png" type="image/x-icon">
+    <style>
+        body {
+    background-color: #AD6105;
+    margin: 0;
+}
+
+.encabezado {
+    background-color: #452702;
+    display: flex;
+    position: sticky;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    top: 0;
+    opacity: 0.97;
+    z-index: 100;
+}
+
+.encabezado__titulo {
+    margin: 0;
+    margin-left: 10px;
+    color: #eee;
+}
+
+.encabezado__nav {
+    margin-right: 10px; 
+    display: inline-block;
+}   
+
+.encabezado__nav__link {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #eee;
+    font-size: 20px;
+    display: inline-block;
+    transition-property: color;
+    transition-duration: 0.5s;
+}
+
+.encabezado__nav__link:hover {
+    color: #AD6105;
+}
+
+.homesection {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 120px;
+    padding-bottom: 0;
+}
+
+.homesection__title {
+    font-family: monospace;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    font-size: 30px;
+    color: #222;
+    text-shadow: 0 4px 5px #222;
+    margin-bottom: 10px;
+}
+
+.homesection__description {
+    font-size: 20px;
+    color: #222;
+    font-weight: bold;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.homesection__details {
+    box-sizing: border-box;
+    border: 2px solid #222;
+    width: 80%;
+    background-color: #A59A05;
+    margin-bottom: 50px;
+    margin-top: 10px;
+    border-radius: 10px;
+
+}
+
+.homesection__details--summary {
+    padding: 20px 10px;
+}
+
+.homesection__details--description {
+    background-color: #857A04;
+    box-sizing: border-box;
+    padding: 20px 10px;
+    margin: 0;
+    border-top: .5px solid #222;
+}
+
+.homesection__details:hover {
+    cursor: pointer;
+}
+
+.menu__title {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #222;
+    font-size: 30px;
+    text-shadow: 0 0 5px #222;
+    padding-top: 100px;
+}
+
+.menu {
+    border: 2px solid #222;
+    margin: auto;
+    width: 45%;
+    height: 30%;
+    margin-top: 10px;
+    padding: 20px 0;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #222;
+    background-color: #A59A05;
+}
+
+.first__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #222;
+    margin: 10px 7.5%;
+    margin-bottom: 10px;
+}
+
+.menu__section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #222;
+    margin: 0 7%;
+    margin-bottom: 10px; 
+}
+
+.menu__item {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.menu__item::after {
+    content: "";
+    flex: 1;
+    border-bottom: 2px dotted #222;
+    margin: 0 2.5px;
+}
+
+.menu__images {
+    columns: 2;
+    width: 80%;
+    margin: 50px auto;
+    height: 120vh;
+    padding: 40px 20px;
+    border-radius: 20px;
+    border: 1px solid #222;
+    padding-bottom: 0;
+    box-shadow: 0 0 20px #222;
+    background-image: url(valla.png);
+    background-size: cover;
+    background-position-x: center;
+}
+
+.menu__images--img {
+    margin: 10px 5%;
+    width: 90%;
+    height: 30%;
+    border-radius: 10px;
+    object-position: 0 10% 0 0;
+    object-fit: cover;
+    transition-property: filter;
+    transition-duration: 0.3s;
+}
+
+.img__coldbrew {
+    box-sizing: border-box;
+    margin-left: -50%;
+    width: 100%;
+    height: 30%;
+    margin-top: 10px; 
+}
+
+.menu__images--coldbrew {
+    margin: 0;
+    width: 90%;
+    height: 100%;
+}
+
+.menu__images--img:hover {
+    cursor: pointer;
+    filter: brightness(0.6);
+}
+
+.contacto, .contacto__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #222;
+    line-height: 0.5;
+}
+
+.contacto__title {
+    font-size: 30px;
+}
+
+.contacto {
+    background-color: #A59A05;
+    box-sizing: border-box;
+    border: 2px solid #222;
+    width: 400px;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #222;
+    padding: 15px 0
+}
+
+.contacto__span {
+    font-weight: bolder;
+    font-family: arial;
+    font-size: 17px;
+}
+
+.footer {
+    background-color: #452702;
+    color: #eee;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 50px;
+    padding-bottom: 60px;
+}
+
+.redes__link {
+    margin: auto 30px;
+    text-decoration: none;
+    color: #eee;
+    display: inline-block;
+    transition-property: color, transform;
+    transition-duration: 0.3s;
+    margin-top: 10px
+}
+
+.redes__link:hover {
+    color: #AD6105;
+    transform: scale(1.1);
+}
+    </style>
+</head>
+<body>
+    <header class="encabezado">
+        <h1 class="encabezado__titulo">
+            COFFEE SHOP
+        </h1>
+        <nav class="encabezado__nav">
+            <a href="#home" class="encabezado__nav__link">Home</a>
+            <a href="#menu" class="encabezado__nav__link">Menu</a>
+            <a href="#contact" class="encabezado__nav__link">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="homesection">
+            <h2 class="homesection__title">
+                WELCOME TO OUR COFFEE SHOP
+            </h2>
+            <p class="homesection__description">
+                THE BEST COFFEE TO START YOUR DAY
+            </p>
+            <details class="homesection__details">
+                <summary class="homesection__details--summary">
+                    MORE ABOUT US
+                </summary>
+                <p class="homesection__details--description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.
+                </p>
+                <p class="homesection__details--description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.
+                </p>
+            </details>
+        </section>
+    <h2 class="menu__title" id="menu">
+        MENU
+    </h2>
+    <section class="menu">
+        <section class="first__menu">
+            <span class="menu__item">
+                EXPRESSO
+            </span>
+            <span class="menu__price">
+                $20
+            </span>
+        </section>
+        <section class="menu__section">
+            <span class="menu__item menu__item--americano">
+                CAFE AMERICANO
+            </span>
+            <span class="menu__price">
+                $20
+            </span>
+        </section>
+        <section class="menu__section">
+            <span class="menu__item">
+                LATTE
+            </span>
+            <span class="menu__price">
+                $40
+            </span>
+        </section>
+        <section class="menu__section">
+            <span class="menu__item">
+                CAFE MOCHA
+            </span>
+            <span class="menu__price">
+                $45
+            </span>
+        </section>
+        <section class="menu__section">
+            <span class="menu__item">
+                COLD BREW
+            </span>
+            <span class="menu__price">
+                $50
+            </span>
+        </section>
+    </section>
+    <section class="menu__images">
+        <img src=" expresso.webp" alt="cafe expresso" class="menu__images--img menu__images--expresso">
+        <img src=" capchino.jpg" alt="cafe capuchino" class="menu__images--img">
+        <img src=" latte.webp" alt="cafe latte" class="menu__images--img">
+        <img src=" mocha.webp" alt="cafe mocha" class="menu__images--img">
+        <div class="img__coldbrew">
+            <img src=" cold brew.webp" alt="cafe cold brew" class="menu__images--img menu__images--coldbrew">
+        </div>
+    </section>
+    <h2 class="contacto__title">Contacto</h2>
+    <section class="contacto" id="contact">
+    <p>📍 <span class="contacto__span">Dirección:</span> Av. Café 123, Ciudad</p>
+    <p>📞 <span class="contacto__span">Teléfono:</span> +52 55 1234 5678</p>
+    <p>📧 <span class="contacto__span">Email:</span> cafe@ejemplo.com</p>
+    <p>🕒 <span class="contacto__span">Horario:</span> Lunes a Domingo 8:00 AM - 8:00 PM</p>
+</section>
+    </main>
+    <footer class="footer">
+    <p>© 2026 Café Aroma. Todos los derechos reservados.</p>
+    <p>Síguenos:</p>
+    <section class="redes">
+    <a href="https://www.instagram.com/rich_r_z" target="_blank" class="redes__link">Instagram</a>
+    <a href="" target="_blank" class="redes__link">Facebook</a>
+    <a href="" target="_blank" class="redes__link">TikTok</a>
+    </section>
+</footer>
+</body>
+</html>
